@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 var tasks = []; //we will create a array as because we want task to get added not to overwrite.
 const app = express();
 app.use(bodyParser.urlencoded({extended:true}));
+app.use(express.static("public"));
 
 //this line of code will tell you that our app(which was build by express) to use EJS as its view engine.
 app.set('view engine', 'ejs');

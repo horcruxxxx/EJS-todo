@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html>
+    <link rel="stylesheet" href="styles.css">
     <body>
-        <!-- <h1>Dear user its a <%= DayType %></h1> -->
-        <% if(DayType==="saturday" || DayType==="sunday"){ %>
-            <h1 style="color:yellow">yeah! its weekend</h1>
-        <% }
-        else{ %> 
+        <div class="box" id="heading">
+            <% if(DayType==="saturday" || DayType==="sunday"){ %>
+                <h1 style="color:yellow">yeah! its weekend</h1>
+            <% }
+            else{ %> 
 <!--jab jab transition hoga html to if-else tab tab scriplet tag lagegea.yaha per closing bracket ke baad seedha else aa rha tha isliye nhi lagaya.  -->
-            <h1 style="color:blue">boo! its a working day</h1>
-        <% } %>
-        
-        <ul>
-            <li>milk</li>
-            <li>coffee</li>
-            <% for(var i=0;i<newitems.length;i++){ %>
-                <li><%= newitems[i] %></li>
+                <h1 style="color:blue">boo! its a working day</h1>
             <% } %>
-        </ul>
+        </div>
+        
+        
+        <div class="box">    
+            <p>milk</p>
+            <p>coffee</p>
+            <% for(var i=0;i<newitems.length;i++){ %>
+                <div class="item">
+                    <p><%= newitems[i] %></p>
+                </div>
+            <% } %>
+            <form class="item" action="/" method="post">
+                <input type="text" name="i1" placeholder="Add a new Task"/>
+                <button type="submit" name="i2">+</button>
+            </form>
+        </div>    
 
-        <form action="/" method="post">
-            <input type="text" name="i1" placeholder="Add a new Task"/>
-            <button type="submit" name="i2">Add</button>
-        </form>
     </body>
 </html>
