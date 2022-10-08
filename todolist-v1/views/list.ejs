@@ -13,16 +13,15 @@
         </div>
         
         
-        <div class="box">    
-            <p>milk</p>
-            <p>coffee</p>
+        <div class="box">
             <% for(var i=0;i<newitems.length;i++){ %>
                 <div class="item">
+                    <input type="checkbox">
                     <p><%= newitems[i] %></p>
                 </div>
             <% } %>
             <form class="item" action="/" method="post">
-                <input type="text" name="i1" placeholder="Add a new Task"/>
+                <input type="text" name="i1" placeholder="Add a new Task" autocomplete="off"/>
                 <button type="submit" name="i2">+</button>
             </form>
         </div>    

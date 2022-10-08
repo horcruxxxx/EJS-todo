@@ -1,6 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-var tasks = []; //we will create a array as because we want task to get added not to overwrite.
+var tasks = ["milk","coffee"]; //we will create a array as because we want task to get added not to overwrite.
 const app = express();
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("public"));
